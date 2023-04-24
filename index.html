@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stardew Valley for Nintendo Switch</title>
+    <script
+      src="https://kit.fontawesome.com/1621419adc.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://use.typekit.net/iwr6uyi.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header class="nav-header">
+      <nav class="navbar">
+        <div class="top">
+          <div class="left-side">
+            <div class="logo">
+              <svg
+                viewBox="0 0 97 24"
+                xmlns="http://www.w3.org/2000/svg"
+                width="69"
+                role="presentation"
+                alt=""
+                data-testid="NintendoRacetrackLogoIcon"
+                size="69"
+                color="currentColor"
+              >
+                <path
+                  d="M17.945 14.157l-4.85-7.838H9.609V17.59h3.486V9.752l4.85 7.838h3.456V6.32h-3.486l.03 7.837zm27.554-4.04V8.993H43.68v-1.52h-3.395v1.52h-1.849v1.124h1.85v7.473h3.394v-7.473h1.82zM23.341 17.56h3.364v-7.474h-3.364v7.474zm0-8.932h3.395V6.319H23.34v2.309zm59.17.942c-2.728 0-4.941 1.883-4.941 4.192s2.213 4.193 4.94 4.193c2.729 0 4.942-1.884 4.942-4.193 0-2.309-2.213-4.192-4.941-4.192zm1.364 5.772c0 1.185-.698 1.67-1.364 1.67-.667 0-1.395-.485-1.395-1.67v-3.16c0-1.184.697-1.67 1.395-1.67.666 0 1.364.486 1.364 1.67v3.16zm-10.73-4.891c-.547-.304-1.123-.608-1.91-.669-2.426-.212-4.305 1.945-4.305 3.92 0 2.612 2 3.554 2.304 3.706 1.152.516 2.607.547 3.88-.274v.426h3.334V6.32h-3.334c.03 0 .03 2.4.03 4.13zm.03 3.342v1.336c0 1.155-.789 1.458-1.334 1.458-.546 0-1.334-.303-1.334-1.458v-2.673c0-1.155.788-1.458 1.334-1.458.515 0 1.333.303 1.333 1.458v1.337zM34.616 9.752c-1.122.03-2.031.516-2.698 1.124v-.79h-3.365v7.474h3.365v-4.922c0-.638.697-1.367 1.607-1.367.909 0 1.546.73 1.546 1.367v4.922h3.364v-4.071c0-2.947-2.546-3.798-3.82-3.737zm27.433 0a4.075 4.075 0 0 0-2.698 1.124v-.79h-3.365v7.474h3.365v-4.922c0-.638.697-1.367 1.606-1.367.91 0 1.546.73 1.546 1.367v4.922h3.365v-4.071c0-2.947-2.546-3.798-3.82-3.737zm-7.063 4.101c0-2.309-2.243-4.253-4.971-4.253-2.759 0-4.972 1.884-4.972 4.193 0 2.308 2.213 4.192 4.972 4.192 2.273 0 4.213-1.306 4.789-3.068H51.44v.455c0 1.367-.91 1.671-1.394 1.671-.515 0-1.425-.304-1.425-1.67v-1.55l6.366.03zm-6.123-2.643a1.391 1.391 0 0 1 1.182-.668c.455 0 .91.213 1.182.668.212.365.212.82.212 1.458H48.62c0-.637.03-1.063.243-1.458zm39.921-3.493c0-.365-.272-.547-.818-.547h-.758v1.914h.455v-.79h.242l.364.79h.515l-.424-.851c.273-.091.424-.273.424-.516zm-.879.273h-.242v-.547h.212c.273 0 .424.091.424.274 0 .212-.12.273-.394.273zm.03-1.58c-.94 0-1.727.79-1.727 1.732s.788 1.732 1.728 1.732 1.727-.79 1.727-1.732a1.73 1.73 0 0 0-1.727-1.732zm0 3.13a1.413 1.413 0 0 1-1.394-1.398c0-.76.637-1.398 1.395-1.398.757 0 1.394.638 1.394 1.398 0 .76-.637 1.397-1.394 1.397zM84.148 0H12.64C5.062-.03 0 5.438 0 11.97c0 6.53 5.062 11.939 12.67 11.939h71.508c7.608 0 12.67-5.408 12.67-11.94C96.818 5.44 91.726 0 84.148 0zm-.03 20.993H12.671c-6.033.03-9.7-4.041-9.7-9.023 0-4.983 3.698-8.993 9.7-9.023h71.446c6.002 0 9.7 4.04 9.7 9.023 0 4.982-3.668 9.023-9.7 9.023z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <div class="search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                type="text"
+                placeholder="Search games, hardware, news, etc"
+              />
+              <div class="categories">
+                <button id="category-btn">
+                  All categories <i class="fa-regular fa-angle-down"></i>
+                </button>
+                <ul class="categories-list" id="categories-list">
+                  <li>
+                    <a href="#" class="categories-link">All categories</a>
+                  </li>
+                  <li><a href="#" class="categories-link">Games</a></li>
+                  <li><a href="#" class="categories-link">Hardware</a></li>
+                  <li><a href="#" class="categories-link">Merchandise</a></li>
+                  <li><a href="#" class="categories-link">News & Events</a></li>
+                  <li><a href="#" class="categories-link">Support</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="right-side">
+            <ul class="links">
+              <li>
+                <a href="#" class="link"
+                  ><i class="fa-solid fa-message-question"></i> Support</a
+                >
+              </li>
+              <li>
+                <a href="#" class="link"
+                  ><i class="fa-solid fa-heart"></i> Wish List</a
+                >
+              </li>
+              <li>
+                <a href="#" class="link"
+                  ><i class="fa-solid fa-cart-shopping"></i> Cart</a
+                >
+              </li>
+              <li>
+                <a href="#" class="link"
+                  ><i class="fa-solid fa-user"></i> Log in / Sign up</a
+                >
+              </li>
+            </ul>
+
+            <button class="mobile-nav-btn">
+              <i class="fa-solid fa-block-question"></i> My Nintendo Store
+            </button>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <div class="sm-container">
+            <button>
+              <i class="fa-solid fa-block-question"></i> My Nintendo Store
+              <i class="fa-regular fa-angle-down"></i>
+            </button>
+            <button>
+              <i class="fa-solid fa-gamepad-modern"></i> Games
+              <i class="fa-regular fa-angle-down"></i>
+            </button>
+            <button>
+              <i class="fa-solid fa-game-console-handheld"></i> Nintendo Switch
+              <i class="fa-regular fa-angle-down"></i>
+            </button>
+            <button><i class="fa-solid fa-newspaper"></i> News & Events</button>
+            <button>
+              <i class="fa-solid fa-star"></i> Play Nintendo
+              <i class="fa-regular fa-angle-down"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="sm-container bg-gray">
+        <div class="free-shipping">
+          <i class="fa-solid fa-truck"></i>
+          <p>
+            <strong>Free shipping</strong> on orders $50 or more.
+            <a href="#">Restrictions apply.</a>
+          </p>
+        </div>
+        <div class="nintendo-points">
+          <i class="fa-light fa-coin-front"></i>
+          <p>
+            Earn <span class="underline">My Nintendo Points</span> on digital
+            games
+          </p>
+        </div>
+      </section>
+
+      <section class="bg-lightblue">
+        <div class="hero-container hero">
+          <div class="col">
+            <div class="breadcrumbs">
+              <a href="#" class="breadcrumb-link"
+                >Store <i class="fa-regular fa-angle-right"></i
+              ></a>
+              <a href="#" class="breadcrumb-link"
+                >Games <i class="fa-regular fa-angle-right"></i
+              ></a>
+              <a href="#" class="breadcrumb-link">Stardew Valley</a>
+            </div>
+            <div class="slider-wrapper">
+              <div class="mySlides">
+                <div class="numbertext">1 / 7</div>
+                <img src="./images/stardew.avif" style="width: 100%" />
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">2 / 7</div>
+                <img src="./images/screenshot01.avif" style="width: 100%" />
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">3 / 7</div>
+                <img src="./images/screenshot02.avif" style="width: 100%" />
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">4 / 7</div>
+                <img src="./images/screenshot03.avif" style="width: 100%" />
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">5 / 7</div>
+                <img src="./images/screenshot04.avif" style="width: 100%" />
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">6 / 7</div>
+                <img src="./images/screenshot05.avif" style="width: 100%" />
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">7 / 7</div>
+                <img src="./images/screenshot06.avif" style="width: 100%" />
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">❮</a>
+              <a class="next" onclick="plusSlides(1)">❯</a>
+
+              <div class="row">
+                <div class="column">
+                  <img
+                    class="demo cursor"
+                    src="./images/screenshot01.avif"
+                    style="width: 100%"
+                    onclick="currentSlide(1)"
+                    alt="The Woods"
+                  />
+                </div>
+                <div class="column">
+                  <img
+                    class="demo cursor"
+                    src="./images/screenshot02.avif"
+                    style="width: 100%"
+                    onclick="currentSlide(2)"
+                    alt="Cinque Terre"
+                  />
+                </div>
+                <div class="column">
+                  <img
+                    class="demo cursor"
+                    src="./images/screenshot03.avif"
+                    style="width: 100%"
+                    onclick="currentSlide(3)"
+                    alt="Mountains and fjords"
+                  />
+                </div>
+                <div class="column">
+                  <img
+                    class="demo cursor"
+                    src="./images/screenshot04.avif"
+                    style="width: 100%"
+                    onclick="currentSlide(4)"
+                    alt="Northern Lights"
+                  />
+                </div>
+                <div class="column">
+                  <img
+                    class="demo cursor"
+                    src="./images/screenshot05.avif"
+                    style="width: 100%"
+                    onclick="currentSlide(5)"
+                    alt="Nature and sunrise"
+                  />
+                </div>
+                <div class="column">
+                  <img
+                    class="demo cursor"
+                    src="./images/screenshot06.avif"
+                    style="width: 100%"
+                    onclick="currentSlide(6)"
+                    alt="Snowy Mountains"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="game-rating">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 39.68 59.53"
+                width="40"
+                height="60"
+                role="img"
+                title="Everyone 10+"
+              >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #fff;
+                    }
+                  </style>
+                </defs>
+                <g id="Layer_2" data-name="Layer 2">
+                  <g id="Layer_1-2" data-name="Layer 1">
+                    <path class="cls-1" d="M39.69 0H0v59.53h39.69V0z"></path>
+                    <path d="M39.11.64v58.25H.58V.64h38.53"></path>
+                    <path
+                      class="cls-1"
+                      d="M2.52 2.71H36.9v9.66H2.52zM2.5 14.47h34.4v35.51H2.5zm.01 42.32v-4.71h6.9v1.1H5.28v.67h3.5v1.1h-3.5v.74h4.29v1.1H2.51zm12.93-3.34a.52.52 0 00-.4-.32 2.53 2.53 0 00-.72-.09c-.61 0-.88.1-.88.28 0 .69 4.87.26 4.87 2 0 1.09-1.64 1.63-4 1.63s-3.7-.73-3.75-1.58h2.65a.69.69 0 00.46.37 2.52 2.52 0 00.79.12c.69 0 1.16-.12 1.16-.35 0-.71-4.88-.22-4.88-2 0-1 1.56-1.5 3.67-1.5 2.35 0 3.43.66 3.63 1.49zm7.02.67h1.09c.86 0 1.32-.12 1.32-.45s-.47-.49-1.11-.49h-1.3zm0 1v1.64h-2.77v-4.68h4c2.82 0 3.75.43 3.75 1.34 0 .55-.44 1-1.43 1.16.9.18 1.44.29 1.44 1.24 0 .61 0 .83.29.83v.14h-2.81a1.83 1.83 0 01-.14-.82c0-.62-.19-.82-1.48-.82zm9.45-1.94V54h1.16c.55 0 1-.14 1-.41s-.54-.38-1.13-.38zm0 1.64v.87h1.21c.69 0 1.21-.08 1.21-.43s-.65-.44-1.53-.44zm-2.77 2v-4.74h4c1.9 0 3.42.25 3.42 1.18 0 .49-.57.84-1.1 1 .91.13 1.4.57 1.4 1.08 0 1.05-1.44 1.42-3.64 1.42z"
+                    ></path>
+                    <path
+                      d="M21.88 41.26H20.4v.81h1.48v1.44h.84v-1.44h1.48v-.81h-1.48v-1.44h-.84zm-2.36-.37c0-2.86-1.54-4.56-4.08-4.56-3.45 0-4.29 2.35-4.29 4.56 0 2.7 1.35 4.56 4.18 4.56s4.19-1.86 4.19-4.56M5.11 22.68l20.83-6.22 2.06 6.6-10.41 3.11.85 2.7L28.09 26l2.08 6.59-9.64 2.88.9 2.84 10.78-3.22 2.09 6.59L13.13 48l-8-25.32m.77 16.69a7 7 0 002.59-1.25V45h2v-8.63H8.54A6.88 6.88 0 015.9 37.7v1.67"
+                    ></path>
+                    <path
+                      d="M13 40.81c0-2.89 1.16-3.56 2.47-3.56 1.47 0 2.3 1.11 2.3 3.64 0 1.58-.44 3.52-2.32 3.51s-2.52-1.48-2.45-3.59M3.48 10.28V4.8h2.15v.84H4.31V7h1.22v.84H4.31v1.6h1.36v.84zM5.89 4.8h.86l.61 4 .69-4h.81l-1 5.48h-1zm3.35 5.48V4.8h2.14v.84h-1.32V7h1.22v.84h-1.22v1.6h1.37v.84zm3.53 0h-.83V4.8h1.53a.77.77 0 01.67.37 1.94 1.94 0 01.25 1.07 2.12 2.12 0 01-.17.88.77.77 0 01-.56.46h.18a.6.6 0 01.24.14.83.83 0 01.2.31 1.5 1.5 0 01.09.58v.87a3.48 3.48 0 000 .47 1.23 1.23 0 000 .29h-.8a1.54 1.54 0 01-.09-.52v-1a1.45 1.45 0 00-.06-.39.52.52 0 00-.17-.26A.53.53 0 0013 8h-.21zm0-3.11h.36a.28.28 0 00.2-.08.55.55 0 00.14-.19 1.1 1.1 0 00.06-.26 1.32 1.32 0 000-.27 1 1 0 00-.11-.56.36.36 0 00-.31-.17h-.36zm2.86 1.21l-1-3.58h.9l.59 2.32.63-2.32h.84l-1.1 3.58v1.9h-.83zm3.63 1.99a1.18 1.18 0 01-.79-.24 1.37 1.37 0 01-.4-.63 4 4 0 01-.15-.91v-2a4 4 0 01.15-.91 1.37 1.37 0 01.4-.63 1.18 1.18 0 01.79-.24A1.16 1.16 0 0120 5a1.29 1.29 0 01.4.63 3.15 3.15 0 01.15.91v2a3.15 3.15 0 01-.15.91 1.29 1.29 0 01-.4.63 1.16 1.16 0 01-.74.29zm0-.82a.37.37 0 00.27-.11.75.75 0 00.16-.37 3.22 3.22 0 00.07-.62V6.63a3.22 3.22 0 00-.07-.63.75.75 0 00-.16-.36.34.34 0 00-.27-.12.35.35 0 00-.28.12.86.86 0 00-.16.36 4.29 4.29 0 00-.07.62v1.82a4.29 4.29 0 00.07.62.85.85 0 00.16.37.38.38 0 00.28.12zm2.01.73V4.8h1.11l1.05 3.8V4.8h.77v5.48h-1.08l-1.07-4v4zm3.63 0V4.8h2.15v.84h-1.33V7h1.22v.84h-1.22v1.6h1.37v.84zm3.86-4.61a3.44 3.44 0 00.4-.37 2.27 2.27 0 00.34-.48h.72v5.46h-.82v-4.2a3.26 3.26 0 01-.31.33l-.33.28zm3.36-.92a1.09 1.09 0 01.57.14 1 1 0 01.33.47 3.47 3.47 0 01.16.86V8.7a4.31 4.31 0 01-.13.89 1.24 1.24 0 01-.34.56.84.84 0 01-.6.2.81.81 0 01-.6-.2 1.24 1.24 0 01-.34-.56 4.31 4.31 0 01-.13-.89V6.22a3.47 3.47 0 01.16-.86.89.89 0 01.33-.47 1 1 0 01.59-.14zm0 .8a.24.24 0 00-.19.08.64.64 0 00-.1.29v2.61a4.39 4.39 0 000 .61.64.64 0 00.1.3.19.19 0 00.18.08.21.21 0 00.18-.08.64.64 0 00.1-.3c0-.14 0-.35.05-.61V5.92a.64.64 0 00-.1-.29.26.26 0 00-.22-.08zm2.27.32H35v1.49h.92v.84H35v1.5h-.61V8.2h-.93v-.84h.93z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+              <div class="game-rating-text">
+                <small class="rating"
+                  >Fantasy Violence, Use of Alcohol, Use of Tobacco, Simulated
+                  Gambling, Mild Language, Mild Blood</small
+                >
+                <small>Users Interact</small>
+              </div>
+            </div>
+          </div>
+          <div class="col download">
+            <p>Nintendo Switch</p>
+            <h1 class="text-lg">Stardew Valley</h1>
+            <h2 class="text-lg">$14.99</h2>
+            <small
+              ><img
+                src="./images/my-nintendo-gold-coin.avif"
+                alt="Nintendo Coin"
+              />
+              Eligible for up to 75 Gold Points
+            </small>
+            <button class="btn-lg">
+              <i class="fa-solid fa-download"></i> Direct download
+            </button>
+            <small
+              >This item will be sent to your system automatically after
+              purchase.</small
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="container about">
+        <div class="col about-col">
+          <h2>You're moving to the valley...</h2>
+          <p>
+            You’ve inherited your grandfather’s old farm plot in Stardew Valley.
+            Armed with hand-me-down tools and a few coins, you set out to begin
+            your new life. Can you learn to live off the land and turn these
+            overgrown fields into a thriving home? It won’t be easy. Ever since
+            Joja Corporation came to town, the old ways of life have all but
+            disappeared. The community center, once the town’s most vibrant hub
+            of activity, now lies in shambles. But the valley seems full of
+            opportunity. With a little dedication, you might just be the one to
+            restore Stardew Valley to greatness!
+          </p>
+          <small>Software description provided by the publisher.</small>
+          <a href="#" class="btn-md">Explore this game's official website</a>
+        </div>
+        <div class="col">
+          <img src="./images/stardew-main.avif" alt="stardew valley" />
+        </div>
+      </section>
+
+      <section class="container supported">
+        <div class="col bg-gray">
+          <h3 class="heading-sm">ESRB rating</h3>
+          <div class="game-rating">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 39.68 59.53"
+              width="40"
+              height="60"
+              role="img"
+              title="Everyone 10+"
+            >
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: #fff;
+                  }
+                </style>
+              </defs>
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                  <path class="cls-1" d="M39.69 0H0v59.53h39.69V0z"></path>
+                  <path d="M39.11.64v58.25H.58V.64h38.53"></path>
+                  <path
+                    class="cls-1"
+                    d="M2.52 2.71H36.9v9.66H2.52zM2.5 14.47h34.4v35.51H2.5zm.01 42.32v-4.71h6.9v1.1H5.28v.67h3.5v1.1h-3.5v.74h4.29v1.1H2.51zm12.93-3.34a.52.52 0 00-.4-.32 2.53 2.53 0 00-.72-.09c-.61 0-.88.1-.88.28 0 .69 4.87.26 4.87 2 0 1.09-1.64 1.63-4 1.63s-3.7-.73-3.75-1.58h2.65a.69.69 0 00.46.37 2.52 2.52 0 00.79.12c.69 0 1.16-.12 1.16-.35 0-.71-4.88-.22-4.88-2 0-1 1.56-1.5 3.67-1.5 2.35 0 3.43.66 3.63 1.49zm7.02.67h1.09c.86 0 1.32-.12 1.32-.45s-.47-.49-1.11-.49h-1.3zm0 1v1.64h-2.77v-4.68h4c2.82 0 3.75.43 3.75 1.34 0 .55-.44 1-1.43 1.16.9.18 1.44.29 1.44 1.24 0 .61 0 .83.29.83v.14h-2.81a1.83 1.83 0 01-.14-.82c0-.62-.19-.82-1.48-.82zm9.45-1.94V54h1.16c.55 0 1-.14 1-.41s-.54-.38-1.13-.38zm0 1.64v.87h1.21c.69 0 1.21-.08 1.21-.43s-.65-.44-1.53-.44zm-2.77 2v-4.74h4c1.9 0 3.42.25 3.42 1.18 0 .49-.57.84-1.1 1 .91.13 1.4.57 1.4 1.08 0 1.05-1.44 1.42-3.64 1.42z"
+                  ></path>
+                  <path
+                    d="M21.88 41.26H20.4v.81h1.48v1.44h.84v-1.44h1.48v-.81h-1.48v-1.44h-.84zm-2.36-.37c0-2.86-1.54-4.56-4.08-4.56-3.45 0-4.29 2.35-4.29 4.56 0 2.7 1.35 4.56 4.18 4.56s4.19-1.86 4.19-4.56M5.11 22.68l20.83-6.22 2.06 6.6-10.41 3.11.85 2.7L28.09 26l2.08 6.59-9.64 2.88.9 2.84 10.78-3.22 2.09 6.59L13.13 48l-8-25.32m.77 16.69a7 7 0 002.59-1.25V45h2v-8.63H8.54A6.88 6.88 0 015.9 37.7v1.67"
+                  ></path>
+                  <path
+                    d="M13 40.81c0-2.89 1.16-3.56 2.47-3.56 1.47 0 2.3 1.11 2.3 3.64 0 1.58-.44 3.52-2.32 3.51s-2.52-1.48-2.45-3.59M3.48 10.28V4.8h2.15v.84H4.31V7h1.22v.84H4.31v1.6h1.36v.84zM5.89 4.8h.86l.61 4 .69-4h.81l-1 5.48h-1zm3.35 5.48V4.8h2.14v.84h-1.32V7h1.22v.84h-1.22v1.6h1.37v.84zm3.53 0h-.83V4.8h1.53a.77.77 0 01.67.37 1.94 1.94 0 01.25 1.07 2.12 2.12 0 01-.17.88.77.77 0 01-.56.46h.18a.6.6 0 01.24.14.83.83 0 01.2.31 1.5 1.5 0 01.09.58v.87a3.48 3.48 0 000 .47 1.23 1.23 0 000 .29h-.8a1.54 1.54 0 01-.09-.52v-1a1.45 1.45 0 00-.06-.39.52.52 0 00-.17-.26A.53.53 0 0013 8h-.21zm0-3.11h.36a.28.28 0 00.2-.08.55.55 0 00.14-.19 1.1 1.1 0 00.06-.26 1.32 1.32 0 000-.27 1 1 0 00-.11-.56.36.36 0 00-.31-.17h-.36zm2.86 1.21l-1-3.58h.9l.59 2.32.63-2.32h.84l-1.1 3.58v1.9h-.83zm3.63 1.99a1.18 1.18 0 01-.79-.24 1.37 1.37 0 01-.4-.63 4 4 0 01-.15-.91v-2a4 4 0 01.15-.91 1.37 1.37 0 01.4-.63 1.18 1.18 0 01.79-.24A1.16 1.16 0 0120 5a1.29 1.29 0 01.4.63 3.15 3.15 0 01.15.91v2a3.15 3.15 0 01-.15.91 1.29 1.29 0 01-.4.63 1.16 1.16 0 01-.74.29zm0-.82a.37.37 0 00.27-.11.75.75 0 00.16-.37 3.22 3.22 0 00.07-.62V6.63a3.22 3.22 0 00-.07-.63.75.75 0 00-.16-.36.34.34 0 00-.27-.12.35.35 0 00-.28.12.86.86 0 00-.16.36 4.29 4.29 0 00-.07.62v1.82a4.29 4.29 0 00.07.62.85.85 0 00.16.37.38.38 0 00.28.12zm2.01.73V4.8h1.11l1.05 3.8V4.8h.77v5.48h-1.08l-1.07-4v4zm3.63 0V4.8h2.15v.84h-1.33V7h1.22v.84h-1.22v1.6h1.37v.84zm3.86-4.61a3.44 3.44 0 00.4-.37 2.27 2.27 0 00.34-.48h.72v5.46h-.82v-4.2a3.26 3.26 0 01-.31.33l-.33.28zm3.36-.92a1.09 1.09 0 01.57.14 1 1 0 01.33.47 3.47 3.47 0 01.16.86V8.7a4.31 4.31 0 01-.13.89 1.24 1.24 0 01-.34.56.84.84 0 01-.6.2.81.81 0 01-.6-.2 1.24 1.24 0 01-.34-.56 4.31 4.31 0 01-.13-.89V6.22a3.47 3.47 0 01.16-.86.89.89 0 01.33-.47 1 1 0 01.59-.14zm0 .8a.24.24 0 00-.19.08.64.64 0 00-.1.29v2.61a4.39 4.39 0 000 .61.64.64 0 00.1.3.19.19 0 00.18.08.21.21 0 00.18-.08.64.64 0 00.1-.3c0-.14 0-.35.05-.61V5.92a.64.64 0 00-.1-.29.26.26 0 00-.22-.08zm2.27.32H35v1.49h.92v.84H35v1.5h-.61V8.2h-.93v-.84h.93z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+            <div class="game-rating-text">
+              <small class="rating"
+                >Fantasy Violence, Use of Alcohol, Use of Tobacco, Simulated
+                Gambling, Mild Language, Mild Blood</small
+              >
+              <small>Users Interact</small>
+            </div>
+          </div>
+        </div>
+        <div class="col bg-gray">
+          <h3 class="heading-sm">Supported play modes</h3>
+          <div class="cards-sm">
+            <div class="card-sm">
+              <div class="icon-box">
+                <svg
+                  viewBox="0 0 32 32"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  role="presentation"
+                  alt=""
+                  data-testid="TvModeIcon"
+                  size="48"
+                  color="currentColor"
+                >
+                  <g fill="currentColor">
+                    <path
+                      d="M11.903 16.114l-1.154-3.56H9.591l1.641 4.627h1.357l1.632-4.627h-1.163zm-7.604-2.58h1.36v3.646h1.058v-3.646h1.371v-.981H4.299zm17.743 9.126v.758H32v-6.702h-9.958z"
+                    ></path>
+                    <path
+                      d="M8.433 21.6H4.784v1.808h3.649v.01h1.656v-.01h3.645V21.6H10.09v-.737h8.443V8.582H0v12.281h8.433v.737zM2.11 18.956v-8.453h14.31v8.453H2.11z"
+                    ></path>
+                    <path
+                      d="M16.333 21.6h-.603v1.801h5.589v-.602h-4.986z"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <p>TV</p>
+            </div>
+
+            <div class="card-sm">
+              <div class="icon-box">
+                <svg
+                  viewBox="0 0 32 32"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  role="presentation"
+                  alt=""
+                  data-testid="TabletopModeIcon"
+                  size="48"
+                  color="currentColor"
+                >
+                  <path
+                    d="M31.32 18.242l-2.657-6.94-1.285 6.94h3.943zM28.174 5.336H6.418l-2.74 12.906h21.754l2.741-12.906zm-5.035 10.505H6.99l1.722-8.094h16.143l-1.717 8.094zm-21.741 5.03H0v.995h.02a.098.098 0 0 0-.02.059v2.008a2.734 2.734 0 0 0 2.736 2.731h7.426a2.737 2.737 0 0 0 2.741-2.731v-2.008a.18.18 0 0 0-.01-.06h.01v-.994H1.397zm7.64.31a1 1 0 1 1-1.004 1.002c0-.554.45-1.002 1.004-1.001zm-5.845 4.43a1.837 1.837 0 1 1 1.858-1.833c-.003.49-.2.958-.55 1.302a1.839 1.839 0 0 1-1.308.53zm3.24-1.833a1.009 1.009 0 0 1 1.004-.985.981.981 0 1 1-1.004.985zm2.605 2.57a.983.983 0 1 1 .99-.978.988.988 0 0 1-.99.977zm1.591-1.591a.982.982 0 1 1 0-1.964.982.982 0 1 1 0 1.964zM32 20.87H19.097v.995h.02a.098.098 0 0 0-.02.059v2.008a2.73 2.73 0 0 0 2.731 2.731h7.431A2.738 2.738 0 0 0 32 23.933v-2.009a.18.18 0 0 0-.01-.06H32v-.994zm-3.866.31a1 1 0 0 1-.006 1.999.999.999 0 1 1 .006-1.998zm-5.85 4.43a1.836 1.836 0 0 1 0-3.673 1.837 1.837 0 1 1 0 3.672zm3.24-1.833c.015-.545.459-.98 1.004-.985a.981.981 0 1 1 0 1.964c-.544 0-.99-.434-1.004-.979zm2.61 2.57a.983.983 0 1 1 .99-.978.988.988 0 0 1-.99.977zm1.586-1.591a.982.982 0 1 1 0-1.964.982.982 0 1 1 0 1.964z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <p>Tabletop</p>
+            </div>
+
+            <div class="card-sm">
+              <div class="icon-box">
+                <svg
+                  viewBox="0 0 32 32"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  role="presentation"
+                  alt=""
+                  data-testid="HandheldModeIcon"
+                  size="48"
+                  color="currentColor"
+                >
+                  <path
+                    d="M28.812 8.455h-2.353c-.014 0-.038.009-.052.009v-.01H5.621v.014c-.028-.004-.061-.013-.07-.013H3.192A3.196 3.196 0 0 0 0 11.65v8.696a3.203 3.203 0 0 0 3.193 3.198H5.55c.01 0 .043-.01.07-.015v.015h20.787v-.015a.163.163 0 0 0 .052.015h2.353A3.195 3.195 0 0 0 32 20.346V11.65a3.187 3.187 0 0 0-3.188-3.196zm-.183 1.973a1.014 1.014 0 1 1-1.012 1.012 1.006 1.006 0 0 1 1.012-1.012zm.994 4.276a1.003 1.003 0 1 1-2.005-.021 1.003 1.003 0 0 1 2.005.021zM3.521 10.428a1.89 1.89 0 1 1-.703 3.639 1.892 1.892 0 0 1-1.168-1.755c0-1.035.835-1.877 1.87-1.884zm1.007 6.22a1.001 1.001 0 0 1-1.509.882 1.007 1.007 0 0 1-.497-.882 1.024 1.024 0 0 1 .999-1.026 1.03 1.03 0 0 1 1.007 1.026zM.896 18.29a1.003 1.003 0 1 1 2.006.018 1.003 1.003 0 0 1-2.006-.018zm2.625 2.636a1.012 1.012 0 0 1-.725-1.727 1.013 1.013 0 0 1 1.732.713 1.008 1.008 0 0 1-1.007 1.014zm1.636-1.623a1.02 1.02 0 1 1-.004-2.04 1.02 1.02 0 0 1 .004 2.04zm20.092 1.42H6.774v-9.45H25.25v9.45zm.722-7.66a1.021 1.021 0 1 1 2.043.009 1.021 1.021 0 0 1-2.043-.009zm2.658 7.863a1.892 1.892 0 1 1 1.866-1.88 1.88 1.88 0 0 1-1.866 1.88zm1.622-6.836a1.019 1.019 0 0 1-.748-1.726 1.018 1.018 0 1 1 .748 1.726z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+              <p>Handheld</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="release-info container">
+        <div class="row">
+          <p class="lead"><i class="fa-solid fa-calendar"></i> Release date</p>
+          <div class="info-list">
+            <p>October 5, 2017</p>
+          </div>
+        </div>
+        <div class="row">
+          <p class="lead"><i class="fa-solid fa-users"></i> No. of players</p>
+          <div class="info-list">
+            <a href="#">Single System (1)</a>
+            <a href="#">Local wireless (1)</a>
+            <a href="#">Online (1-4)</a>
+          </div>
+        </div>
+        <div class="row">
+          <p class="lead"><i class="fa-solid fa-gamepad"></i> Genre</p>
+          <div class="info-list">
+            <a href="#">Role-playing</a>
+            <a href="#">Simulation</a>
+          </div>
+        </div>
+        <div class="row">
+          <p class="lead"><i class="fa-solid fa-building"></i> Publisher</p>
+          <div class="info-list">
+            <a href="#">ConcernedApe</a>
+          </div>
+        </div>
+        <div class="row">
+          <p class="lead">
+            <i class="fa-solid fa-gear-complex"></i> ESRB rating
+          </p>
+          <div class="info-list">
+            <a href="#">Everyone10+</a>
+          </div>
+        </div>
+        <div class="row">
+          <p class="lead">
+            <i class="fa-solid fa-game-console-handheld"></i> Supported play
+            modes
+          </p>
+          <p>TV mode, Tabletop mode, Handheld mode</p>
+        </div>
+        <div class="row">
+          <p class="lead">
+            <i class="fa-solid fa-database"></i> Game file size
+          </p>
+          <p>1.5 GB</p>
+        </div>
+        <div class="row">
+          <p class="lead">
+            <i class="fa-solid fa-globe"></i> Supported languages
+          </p>
+          <p>
+            English, French, German, Italian, Japanese, Korean, Portuguese,
+            Russian, Simplified Chinese, Spanish, Traditional Chinese
+          </p>
+        </div>
+      </section>
+
+      <section class="cta-section container">
+        <div class="col cta-about">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 250 66"
+            width="200"
+            role="presentation"
+            alt=""
+            data-testid="NsoHorizontalLogoIcon"
+            size="200"
+            color="currentColor"
+          >
+            <polygon fill="#E60012" points="0 0 250 0 250 66 0 66"></polygon>
+            <path
+              d="M29.7610313,24.0037881 C29.7610313,25.9086441 31.3184219,27.4528305 33.240125,27.4528305 C35.1618281,27.4528305 36.7192187,25.9086441 36.7192187,24.0037881 C36.7192187,22.0993814 35.1618281,20.5556441 33.240125,20.5556441 C31.3184219,20.5556441 29.7610313,22.0993814 29.7610313,24.0037881 Z M41.5762656,13 L33.4879844,13 C28.2480469,13 24,17.2108051 24,22.4052542 L24,40.2747881 C24,45.4687881 28.2480469,49.6791441 33.4879844,49.6791441 L41.5762656,49.6791441 C41.72625,49.6791441 41.8476875,49.558322 41.8476875,49.4105508 L41.8476875,13.2690424 C41.8476875,13.1203729 41.72625,13 41.5762656,13 Z M38.8643125,46.7223729 L33.4879844,46.7223729 C31.7497969,46.7223729 30.1167344,46.0517881 28.8883125,44.8341356 C27.6594375,43.6169322 26.983375,41.9977373 26.983375,40.2747881 L26.983375,22.4052542 C26.983375,20.6823051 27.6594375,19.0631102 28.8878594,17.8463559 C30.1162813,16.6282542 31.7497969,15.9572203 33.4879844,15.9572203 L38.8643125,15.9572203 L38.8643125,46.7223729 Z M51.5155625,13 L45.7907812,13 C45.6575625,13 45.5501719,13.1068983 45.5501719,13.2393983 L45.5501719,49.4105508 C45.5501719,49.558322 45.6711562,49.6791441 45.8206875,49.6791441 L51.5155625,49.6791441 C56.7559531,49.6791441 61.0035469,45.4687881 61.0035469,40.2747881 L61.0035469,22.4052542 C61.0035469,17.2108051 56.7559531,13 51.5155625,13 L51.5155625,13 Z M52.8708594,36.882339 C50.8041562,36.882339 49.1294062,35.221822 49.1294062,33.1736864 C49.1294062,31.1255508 50.8041562,29.4654831 52.8708594,29.4654831 C54.9366562,29.4654831 56.6118594,31.1255508 56.6118594,33.1736864 C56.6118594,35.221822 54.9366562,36.882339 52.8708594,36.882339 L52.8708594,36.882339 Z M127.711703,45.4099492 L127.711703,19.5724492 L122.177687,19.5724492 L122.177687,36.2378051 L109.202,19.5724492 L103.950734,19.5724492 L103.950734,45.4099492 L109.221484,45.4099492 L109.221484,28.1813559 L123.094812,45.4099492 L127.711703,45.4099492 Z M83.5388125,18.7343305 C75.761375,18.7343305 69.4565937,24.8935593 69.4565937,32.4909746 C69.4565937,40.088839 75.761375,46.2480678 83.5388125,46.2480678 C91.3171562,46.2480678 97.6219375,40.0883898 97.6219375,32.4909746 C97.6219375,24.8935593 91.3171562,18.7343305 83.5388125,18.7343305 Z M83.5388125,40.9902881 C78.9640625,40.9902881 75.2543281,37.1846186 75.2543281,32.4914237 C75.2543281,27.7977797 78.9640625,23.9930085 83.5388125,23.9930085 C88.1149219,23.9930085 91.8242031,27.7977797 91.8242031,32.4914237 C91.8242031,37.1846186 88.1149219,40.9902881 83.5388125,40.9902881 L83.5388125,40.9902881 Z M140.889031,19.5724492 L135.291125,19.5724492 L135.291125,45.4099492 L155.173344,45.4099492 L155.173344,40.3713559 L140.889484,40.3713559 L140.889484,19.5724492 L140.889031,19.5724492 Z M166.203312,19.5724492 L160.605406,19.5724492 L160.605406,45.4095 L166.203312,45.4095 L166.203312,19.5724492 Z M226.680094,24.6110424 L226.680094,19.5724492 L205.158016,19.5724492 L205.158016,45.4099492 L226.680094,45.4099492 L226.680094,40.3713559 L210.756375,40.3713559 L210.756375,34.5346186 L225.907516,34.5346186 L225.907516,29.7511441 L210.756375,29.7511441 L210.756375,24.6110424 L226.680094,24.6110424 Z M192.009234,36.2378051 L179.034,19.5724492 L173.782281,19.5724492 L173.782281,45.4099492 L179.053484,45.4099492 L179.053484,28.1813559 L192.926359,45.4099492 L197.542797,45.4099492 L197.542797,19.5724492 L192.008781,19.5724492 L192.008781,36.2378051 L192.009234,36.2378051 Z"
+              id="Shape"
+              fill="#FFFFFF"
+            ></path>
+          </svg>
+          <p class="lead">
+            Play online, access classic NES™ and Super NES™ games, and more with
+            a Nintendo Switch Online membership.
+          </p>
+          <p class="lead-sm">
+            This game supports: <span><a href="#">Online Play</a></span>
+            <span><a href="#">Save Data Cloud</a></span>
+          </p>
+          <a href="#" class="btn-md">Learn more</a>
+        </div>
+        <div class="col">
+          <img src="./images/Pro-Controller-Hands.avif" alt="" />
+        </div>
+      </section>
+
+      <div class="slider-container">
+        <div class="slider">
+          <div class="product-card">
+            <img src="./images/portia.avif" alt="Product 1" />
+            <h3>My Time at Portia</h3>
+            <p>Description of Product 1</p>
+            <a href="#" class="product-link">View Details</a>
+          </div>
+          <div class="product-card">
+            <img src="./images/potion.avif" alt="Product 2" />
+            <h3>Potion Permit</h3>
+            <p>Description of Product 2</p>
+            <a href="#" class="product-link">View Details</a>
+          </div>
+          <div class="product-card">
+            <img src="./images/bear-breakfast.avif" alt="Product 3" />
+            <h3>Bear and Breakfast</h3>
+            <p>Description of Product 3</p>
+            <a href="#" class="product-link">View Details</a>
+          </div>
+          <div class="product-card">
+            <img src="./images/little-dragon.avif" alt="Product 3" />
+            <h3>Little Dragons Cafe</h3>
+            <p>Description of Product 3</p>
+            <a href="#" class="product-link">View Details</a>
+          </div>
+          <div class="product-card">
+            <img src="./images/moonlighter.avif" alt="Product 3" />
+            <h3>Moonlighter</h3>
+            <p>Description of Product 3</p>
+            <a href="#" class="product-link">View Details</a>
+          </div>
+          <div class="product-card">
+            <img src="./images/animal-crossing.avif" alt="Product 3" />
+            <h3>Animal Crossing: New Horizons</h3>
+            <p>Description of Product 3</p>
+            <a href="#" class="product-link">View Details</a>
+          </div>
+        </div>
+        <div class="slider-buttons">
+          <button class="prev-btn">Prev</button>
+          <button class="next-btn">Next</button>
+        </div>
+      </div>
+
+      <section class="copyright-section container">
+        <p>
+          WARNING: If you have epilepsy or have had seizures or other unusual
+          reactions to flashing lights or patterns, consult a doctor before
+          playing video games. All users should read the Health and Safety
+          Information available in the system settings before using this
+          software.
+        </p>
+        <p>
+          Nintendo Switch Online membership (sold separately) and Nintendo
+          Account required for online play. Not available in all countries.
+          Internet access required for online features. Terms apply.
+          nintendo.com/switch-online
+        </p>
+        <p>Stardew Valley © ConcernedApe LLC 2016-2020. All rights reserved.</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-top bg-red">
+        <div class="container footer-socials">
+          <svg
+            viewBox="0 0 97 24"
+            xmlns="http://www.w3.org/2000/svg"
+            width="195"
+            role="presentation"
+            alt=""
+            data-testid="NintendoRacetrackLogoIcon"
+            size="195"
+            color="currentColor"
+          >
+            <path
+              d="M17.945 14.157l-4.85-7.838H9.609V17.59h3.486V9.752l4.85 7.838h3.456V6.32h-3.486l.03 7.837zm27.554-4.04V8.993H43.68v-1.52h-3.395v1.52h-1.849v1.124h1.85v7.473h3.394v-7.473h1.82zM23.341 17.56h3.364v-7.474h-3.364v7.474zm0-8.932h3.395V6.319H23.34v2.309zm59.17.942c-2.728 0-4.941 1.883-4.941 4.192s2.213 4.193 4.94 4.193c2.729 0 4.942-1.884 4.942-4.193 0-2.309-2.213-4.192-4.941-4.192zm1.364 5.772c0 1.185-.698 1.67-1.364 1.67-.667 0-1.395-.485-1.395-1.67v-3.16c0-1.184.697-1.67 1.395-1.67.666 0 1.364.486 1.364 1.67v3.16zm-10.73-4.891c-.547-.304-1.123-.608-1.91-.669-2.426-.212-4.305 1.945-4.305 3.92 0 2.612 2 3.554 2.304 3.706 1.152.516 2.607.547 3.88-.274v.426h3.334V6.32h-3.334c.03 0 .03 2.4.03 4.13zm.03 3.342v1.336c0 1.155-.789 1.458-1.334 1.458-.546 0-1.334-.303-1.334-1.458v-2.673c0-1.155.788-1.458 1.334-1.458.515 0 1.333.303 1.333 1.458v1.337zM34.616 9.752c-1.122.03-2.031.516-2.698 1.124v-.79h-3.365v7.474h3.365v-4.922c0-.638.697-1.367 1.607-1.367.909 0 1.546.73 1.546 1.367v4.922h3.364v-4.071c0-2.947-2.546-3.798-3.82-3.737zm27.433 0a4.075 4.075 0 0 0-2.698 1.124v-.79h-3.365v7.474h3.365v-4.922c0-.638.697-1.367 1.606-1.367.91 0 1.546.73 1.546 1.367v4.922h3.365v-4.071c0-2.947-2.546-3.798-3.82-3.737zm-7.063 4.101c0-2.309-2.243-4.253-4.971-4.253-2.759 0-4.972 1.884-4.972 4.193 0 2.308 2.213 4.192 4.972 4.192 2.273 0 4.213-1.306 4.789-3.068H51.44v.455c0 1.367-.91 1.671-1.394 1.671-.515 0-1.425-.304-1.425-1.67v-1.55l6.366.03zm-6.123-2.643a1.391 1.391 0 0 1 1.182-.668c.455 0 .91.213 1.182.668.212.365.212.82.212 1.458H48.62c0-.637.03-1.063.243-1.458zm39.921-3.493c0-.365-.272-.547-.818-.547h-.758v1.914h.455v-.79h.242l.364.79h.515l-.424-.851c.273-.091.424-.273.424-.516zm-.879.273h-.242v-.547h.212c.273 0 .424.091.424.274 0 .212-.12.273-.394.273zm.03-1.58c-.94 0-1.727.79-1.727 1.732s.788 1.732 1.728 1.732 1.727-.79 1.727-1.732a1.73 1.73 0 0 0-1.727-1.732zm0 3.13a1.413 1.413 0 0 1-1.394-1.398c0-.76.637-1.398 1.395-1.398.757 0 1.394.638 1.394 1.398 0 .76-.637 1.397-1.394 1.397zM84.148 0H12.64C5.062-.03 0 5.438 0 11.97c0 6.53 5.062 11.939 12.67 11.939h71.508c7.608 0 12.67-5.408 12.67-11.94C96.818 5.44 91.726 0 84.148 0zm-.03 20.993H12.671c-6.033.03-9.7-4.041-9.7-9.023 0-4.983 3.698-8.993 9.7-9.023h71.446c6.002 0 9.7 4.04 9.7 9.023 0 4.982-3.668 9.023-9.7 9.023z"
+              fill="currentColor"
+            ></path>
+          </svg>
+          <div class="social-links">
+            <a href="#" class="social-link">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-mid container">
+        <div class="footer-links">
+          <h3 class="footer-heading">About Nintendo</h3>
+          <ul class="footer-list">
+            <li><a href="#" class="footer-link">Careers</a></li>
+            <li>
+              <a href="#" class="footer-link"
+                >Corporate Social Responsibility</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3 class="footer-heading">Shop</h3>
+          <ul class="footer-list">
+            <li><a href="#" class="footer-link">Games</a></li>
+            <li><a href="#" class="footer-link">Hardware</a></li>
+            <li><a href="#" class="footer-link">Merchandise</a></li>
+            <li><a href="#" class="footer-link">Sales & deals</a></li>
+            <li><a href="#" class="footer-link">Exclusives</a></li>
+            <li><a href="#" class="footer-link">Online service</a></li>
+            <li><a href="#" class="footer-link">Nintendo NY store</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3 class="footer-heading">My Nintendo Store orders</h3>
+          <ul class="footer-list">
+            <li><a href="#" class="footer-link">Order details</a></li>
+            <li><a href="#" class="footer-link">Shipping info</a></li>
+            <li><a href="#" class="footer-link">Returns & exchanges</a></li>
+            <li><a href="#" class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3 class="footer-heading">Support</h3>
+          <ul class="footer-list">
+            <li><a href="#" class="footer-link">Nintendo Switch</a></li>
+            <li><a href="#" class="footer-link">Nintendo Account</a></li>
+            <li><a href="#" class="footer-link">Other systems</a></li>
+            <li><a href="#" class="footer-link">Repairs</a></li>
+            <li>
+              <a href="#" class="footer-link">Nintendo product recycling</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3 class="footer-heading">Parents</h3>
+          <ul class="footer-list">
+            <li><a href="#" class="footer-link">Info for parents</a></li>
+            <li><a href="#" class="footer-link">Parental controls</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3 class="footer-heading">Community</h3>
+          <ul class="footer-list">
+            <li><a href="#" class="footer-link">Community guidelines</a></li>
+            <li>
+              <a href="#" class="footer-link">Online safety principles</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3 class="footer-heading">Privacy</h3>
+          <ul class="footer-list">
+            <li><a href="#" class="footer-link">Privacy policy</a></li>
+            <li>
+              <a href="#" class="footer-link">Cookies and interest-based ads</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom bg-dark">
+        <div class="container">
+          <p class="copyright">
+            © Nintendo. Games are property of their respective owners. Nintendo
+            of America Inc. Headquarters are in Redmond, Washington, USA
+          </p>
+          <ul class="bottom-links">
+            <li><a href="#" class="bottom-link">Contact us</a></li>
+            <li><a href="#" class="bottom-link">Website feedback</a></li>
+            <li><a href="#" class="bottom-link">Terms of Use</a></li>
+            <li><a href="#" class="bottom-link">Documents & Policies</a></li>
+            <li>
+              <a href="#" class="bottom-link"
+                ><img src="./images/FlagUsaIcon.webp" alt="" /> Change region</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
